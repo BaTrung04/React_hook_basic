@@ -1,14 +1,17 @@
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import "./Nav.scss";
+import { link, NavLink } from "react-router-dom";
 
 const Nav = () => {
     return (
         <div className="topnav">
-            <a className="active" href="/">
+            <NavLink activeClassName="active" to="/" exact={true}>
                 Home
-            </a>
-            <a href="/timer">Timer App</a>
-            <a href="/todo">Todos App</a>
-            <a href="/secret">Secret</a>
+            </NavLink>
+            <NavLink to="/timer">Timer App</NavLink>
+            <NavLink to="/todo">Todos App</NavLink>
+            <NavLink to="/blog">Blogs App</NavLink>
+            <NavLink to="/secret">Secret</NavLink>
         </div>
     );
 };

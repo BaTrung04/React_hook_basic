@@ -6,6 +6,8 @@ import userEvent from "@testing-library/user-event";
 import Todo from "./views/Todo";
 import Covid from "./views/Covid";
 import { CountDown, NewCountDown } from "./views/Countdown";
+import Blog from "./views/Blog";
+import DetailBlog from "./views/DetailBlog";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 //template + logic
@@ -66,7 +68,12 @@ const App = () => {
             <div className="App">
                 <header className="App-header">
                     <Nav />
-                    <img src={logo} className="App-logo" alt="logo" />
+                    <img
+                        src={logo}
+                        className="App-logo"
+                        alt="logo"
+                        style={{ marginTop: "10px" }}
+                    />
                     <h1>REACT HOOK BY {name}!</h1>
                 </header>
                 <Switch>
@@ -96,6 +103,12 @@ const App = () => {
                         >
                             Click me
                         </button>
+                    </Route>
+                    <Route path="/blog" exact>
+                        <Blog />
+                    </Route>
+                    <Route path="/blog/:id">
+                        <DetailBlog />
                     </Route>
                 </Switch>
             </div>
