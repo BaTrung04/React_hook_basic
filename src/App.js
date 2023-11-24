@@ -15,9 +15,10 @@ const App = () => {
 
     const [address, setAddress] = useState("");
     const [todos, setTodos] = useState([
-        { id: "todo1", title: "Watching it hook react" },
-        { id: "todo2", title: "Doing homework" },
-        { id: "todo3", title: "Playing game" },
+        { id: "todo1", title: "Watching it hook react", type: "BaTrung" },
+        { id: "todo2", title: "Doing homework", type: "BaTrung" },
+        { id: "todo3", title: "Playing game", type: "BaTrung2" },
+        { id: "todo4", title: "Reading book", type: "BaTrung4" },
     ]);
 
     const handleEventOnChange = (event) => {
@@ -30,19 +31,36 @@ const App = () => {
             return;
         }
         // hook not merge state
-        let newTodo = { id: "abc", title: address };
+        let newTodo = {
+            id: Math.floor(Math.random() * 10000 + 1),
+            title: address,
+            type: "Eric",
+        };
         setTodos([...todos, newTodo]);
         setAddress("");
     };
 
+    const DeleteDataTodo = (id) => {
+        let currentTodos = todos;
+        currentTodos = currentTodos.filter((item) => item.id !== id);
+        setTodos(currentTodos);
+    };
     //re-render tao lai - du lieu ra ngoai man hinh
     return (
         <div className="App">
-            <Nav />
             <header className="App-header">
+                <Nav />
                 <img src={logo} className="App-logo" alt="logo" />
                 <h1>REACT HOOK BY {name}!</h1>
-                <Todo myData={todos} />
+                <Todo
+                    todos={todos}
+                    title={"All todos"}
+                    DeleteDataTodo={DeleteDataTodo}
+                />
+                <Todo
+                    todos={todos.filter((item) => item.type === "BaTrung")}
+                    title={`BaTrung todos`}
+                />
                 <input
                     type="text"
                     value={address}
