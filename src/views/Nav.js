@@ -3,12 +3,12 @@ import "./Nav.scss";
 const Nav = () => {
     return (
         <div className="topnav">
-            <a className="active" href="#home">
+            <a className="active" href="/">
                 Home
             </a>
-            <a href="#news">Todos</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
+            <a href="/timer">Timer App</a>
+            <a href="/todo">Todos App</a>
+            <a href="/secret">Secret</a>
         </div>
     );
 };
