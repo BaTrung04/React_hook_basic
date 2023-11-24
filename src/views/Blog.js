@@ -1,8 +1,9 @@
 import useFetch from "../customize/fetch";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import "./Blog.scss";
+
 const Blog = () => {
-    const { data: dataBlogs } = useFetch(
+    const { data: dataBlogs, isLoading } = useFetch(
         "https://jsonplaceholder.typicode.com/posts",
         false
     );
@@ -27,6 +28,12 @@ const Blog = () => {
                         </div>
                     );
                 })}
+
+            {isLoading === true && (
+                <div style={{ textAlign: "center !important", with: "100%" }}>
+                    Loading data...
+                </div>
+            )}
         </div>
     );
 };
