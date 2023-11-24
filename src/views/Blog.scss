@@ -28,3 +28,14 @@
         }
     }
 }
+
+.Blog-Detail {
+    text-align: left;
+    width: 600px;
+    border: 1px solid grey;
+    padding: 10px;
+    .title {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+}
