@@ -30,7 +30,7 @@ const DetailBlog = () => {
                         <div className="title">
                             Blog id:{id} ---
                             {isLoading === true
-                                ? "Loaning data.... "
+                                ? "Loading data.... "
                                 : dataBlogDetail.title}
                         </div>
                         <div className="content">{dataBlogDetail.body}</div>

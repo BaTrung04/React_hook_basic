@@ -10,6 +10,7 @@ import Blog from "./views/Blog";
 import DetailBlog from "./views/DetailBlog";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import AddNewblog from "./views/AddNewBlog";
 //template + logic
 // JSX
 // Babel
@@ -109,6 +110,9 @@ const App = () => {
                     </Route>
                     <Route path="/blog/:id">
                         <DetailBlog />
+                    </Route>
+                    <Route path="/add-new-blog">
+                        <AddNewblog />
                     </Route>
                 </Switch>
             </div>
