@@ -1,6 +1,8 @@
 .blogs-container {
     display: flex;
     flex-direction: row;
+
+    justify-content: space-evenly;
     gap: 10px;
     flex-wrap: wrap;
     text-align: left;
@@ -11,10 +13,13 @@
         padding: 10px;
         margin: 0 10px;
         max-width: 575px;
+        min-width: 575px;
 
         .title {
             font-size: 20px;
             font-weight: 500;
+            display: flex;
+            justify-content: space-between;
         }
         .content {
             margin: 10px 0;
