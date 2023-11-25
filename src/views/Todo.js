@@ -21,7 +21,7 @@ const Todo = (props) => {
                 );
             })}
 
-            <hr style={{ width: "250px" }} />
+            <hr style={{ width: "250px", margin: "none" }} />
         </div>
     );
 };
