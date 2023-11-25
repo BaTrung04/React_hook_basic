@@ -12,6 +12,7 @@ import DetailBlog from "./views/DetailBlog";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import AddNewblog from "./views/AddNewBlog";
 import NotFound from "./views/NotFound";
+import YoutubeSearch from "./views/YoutubeSearch";
 //template + logic
 // JSX
 // Babel
@@ -111,6 +112,9 @@ const App = () => {
                     </Route>
                     <Route path="/blog/:id">
                         <DetailBlog />
+                    </Route>
+                    <Route path="/secret">
+                        <YoutubeSearch />
                     </Route>
                     <Route path="/add-new-blog">
                         <AddNewblog />

@@ -75,3 +75,45 @@
         cursor: pointer;
     }
 }
+
+.youtube-search-container {
+    input {
+        outline: none;
+        min-width: 500px;
+        border: none;
+        padding: 2px 5px;
+    }
+    button {
+        border: none;
+        padding: 2px 5px;
+        border-radius: 2px;
+    }
+
+    .yt-result {
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+        padding: 0 200px;
+
+        .left {
+            width: 40vw;
+            .iframe-yt {
+                width: 500px;
+                height: 300px;
+            }
+        }
+        .right {
+            text-align: left;
+            width: 60vw;
+            font-size: 16px;
+            gap: 20px;
+            display: flex;
+            flex-direction: column;
+
+            .title {
+                font-size: 30px;
+                font-weight: 600px;
+            }
+        }
+    }
+}

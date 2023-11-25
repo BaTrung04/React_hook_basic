@@ -12,7 +12,7 @@ const NotFound = () => {
                 Lỗi này thường do chủ sở hữu chỉ chia sẻ nội dung với một nhóm
                 nhỏ, thay đổi người được xem hoặc đã xóa nội dung.
             </h5>
-            <button class="btn btn-primary" onClick={hadleClickBtn}>
+            <button className="btn btn-primary" onClick={hadleClickBtn}>
                 Go to Home Page
             </button>
         </div>
